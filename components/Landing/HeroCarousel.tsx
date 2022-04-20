@@ -3,13 +3,16 @@ import NextImage from 'next/image'
 
 import { styled } from '@config/stitches'
 
-import Img1 from '@assets/carousel-image1.jpg'
+import Img1 from '@assets/carousel-img1.jpeg'
+import Img2 from '@assets/carousel-img2.jpeg'
+import Img3 from '@assets/carousel-img3.jpeg'
+
 import DesktopVector from '@assets/carousel-vector-desktop.png'
 import PhoneVector from '@assets/carousel-vector-phone.png'
 
 import { View, Flex } from '@components'
 
-const carouselImages = [Img1, Img1, Img1, Img1]
+const carouselImages = [Img1, Img2, Img3]
 const getTranslateXValue = (carouselIdx: number) =>
   -(100 / carouselImages.length) * (carouselIdx - 1)
 

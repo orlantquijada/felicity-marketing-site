@@ -6,7 +6,6 @@ import Image from 'next/image'
 import Logo from '@assets/logo/header-logo.png'
 import HalfCircle from './HalfCircle'
 import OurTeam from './OurTeam'
-import OwnerQuote from './OwnerQuote'
 
 export default function AboutUs() {
   return (
@@ -24,7 +23,7 @@ export default function AboutUs() {
           justifyContent: 'center',
           pt: '$5',
           '@tablet': {
-            height: '95vh',
+            height: '125vh',
           },
         }}
       >
@@ -33,7 +32,6 @@ export default function AboutUs() {
         </Title>
         <Mission />
       </Container>
-      <OwnerQuote />
       <OurTeam />
     </View>
   )
@@ -78,16 +76,20 @@ function Mission() {
         </ScrollReveal>
         <ScrollReveal>
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec
-            ultrices tincidunt arcu non sodales neque. Orci phasellus egestas
-            tellus rutrum tellus pellentesque eu tincidun
+            Felicity is not just a name but also the embodiment of the vision
+            that its people are striving to create – a Happy City. Here, we
+            believe that by providing healthy and fresh raw food without having
+            you waste more money, time, and energy, a culture of healthy
+            lifestyle will bud from families and the whole of society. We have
+            made bonds with farmers from the different parts of the island to
+            ensure fresh yet affordable goods for the members.
           </Description>
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec
-            ultrices tincidunt arcu non sodales neque. Orci phasellus egestas
-            tellus rutrum tellus pellentesque eu tincidunt tortor.
+            A system was also created to give you not just a chance to have your
+            foods free for a lifetime but also a chance for you to spend more
+            time with your loved ones while still earning a living. Felicity
+            will take the hassle out of your life so there is nothing for you to
+            experience but a dose of Fresh Happiness Every Day.
           </Description>
         </ScrollReveal>
         <ScrollReveal>
@@ -167,6 +169,7 @@ const Behind = styled(View, {
     left: '-5%',
   },
 })
+
 const ImageContainer = styled(View, {
   userSelect: 'none',
   alignSelf: 'center',

@@ -2,33 +2,50 @@ import Image from 'next/image'
 import { Flex, View, Grid, Container, ScrollReveal } from '@components'
 import { styled } from '@config/stitches'
 import { textStyles } from '@components/Text'
-import SampleImage from 'public/sample.png'
-import HalfCircle from './HalfCircle'
+import Image1 from 'public/Level 1.png'
+import Image2 from 'public/Level 2.png'
+import Image3 from 'public/Level 3.png'
+import Image4 from 'public/Level 4.png'
+import Image5 from 'public/Level 5.png'
 
 const data = [
   {
     id: 1,
-    imageProps: SampleImage,
+    imageProps: Image1,
     color: '#35A3A5',
-    columnTitle: 'Member 1',
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales neque. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. ',
+    columnTitle: 'Guest',
+    subtitle: 'Level 1',
   },
   {
     id: 2,
-    imageProps: SampleImage,
+    imageProps: Image2,
     color: '#61C295',
-    columnTitle: 'Member 2',
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales neque. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. ',
+    columnTitle: 'Patron',
+    subtitle: 'Level 2',
   },
   {
     id: 3,
-    imageProps: SampleImage,
+    imageProps: Image3,
     color: '#20577A',
-    columnTitle: 'Member 3',
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales neque. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. ',
+    columnTitle: 'Fan',
+    subtitle: 'Level 3',
+  },
+]
+
+const data1 = [
+  {
+    id: 1,
+    imageProps: Image4,
+    color: '#35A3A5',
+    columnTitle: 'Dreamer',
+    subtitle: 'Level 4',
+  },
+  {
+    id: 2,
+    imageProps: Image5,
+    color: '#61C295',
+    columnTitle: 'Partner',
+    subtitle: 'Level 5',
   },
 ]
 
@@ -51,7 +68,7 @@ export default function OurTeam() {
       >
         <ScrollReveal>
           <Title size={{ '@initial': '10', '@tablet': '12', '@desktop': '14' }}>
-            OUR TEAM
+            Choose Your Spirit Animal
           </Title>
         </ScrollReveal>
         <OuterFlex>
@@ -60,17 +77,37 @@ export default function OurTeam() {
               <FlexCol
                 css={{
                   '@desktop': {
-                    background:
-                      data.id === 2 ? 'rgba(117, 183, 198, 0.32)' : undefined,
-                    p: '$6 $4 7rem',
+                    p: '$6 $4',
+                    pt: 0,
                     rt: '$pill',
                   },
                 }}
               >
                 <ImageContainer>
-                  <Behind>
-                    <HalfCircle fill={data.color} />
-                  </Behind>
+                  <StyledTeamImage
+                    src={data.imageProps}
+                    alt={data.columnTitle}
+                  />
+                </ImageContainer>
+                <ColumnTitle>{data.columnTitle}</ColumnTitle>
+                <Subtitles>{data.subtitle}</Subtitles>
+              </FlexCol>
+            </ScrollReveal>
+          ))}
+        </OuterFlex>
+        <OuterFlex>
+          {data1.map((data) => (
+            <ScrollReveal key={data.id}>
+              <FlexCol
+                css={{
+                  '@desktop': {
+                    p: '$6 $4',
+                    pt: 0,
+                    rt: '$pill',
+                  },
+                }}
+              >
+                <ImageContainer>
                   <StyledTeamImage
                     src={data.imageProps}
                     alt={data.columnTitle}
@@ -89,7 +126,7 @@ export default function OurTeam() {
 
 const Title = styled('h1', {
   ...textStyles,
-  mb: '$6',
+  mt: '$8',
   textAlign: 'center',
   defaultVariants: {
     color: 'primary4',
@@ -98,9 +135,9 @@ const Title = styled('h1', {
 })
 
 const StyledTeamImage = styled(Image, {
-  borderTopLeftRadius: '300px',
-  borderBottomLeftRadius: '300px',
-  borderTopRightRadius: '300px',
+  borderTopLeftRadius: '50px',
+  borderBottomLeftRadius: '50px',
+  borderTopRightRadius: '50px',
 })
 
 const OuterFlex = styled(Flex, {
@@ -108,14 +145,15 @@ const OuterFlex = styled(Flex, {
   defaultVariants: { gap: '9' },
   '@desktop': {
     flexDirection: 'row',
+    justifyContent: 'center',
   },
 })
 
 const FlexCol = styled(Flex, {
-  position: 'relative',
+  position: 'center',
   flexDirection: 'column',
   defaultVariants: {
-    gap: '4',
+    gap: '5',
   },
 })
 
@@ -135,19 +173,11 @@ const Subtitles = styled('p', {
 })
 
 const ImageContainer = styled(View, {
-  position: 'relative',
+  position: 'center',
   alignSelf: 'center',
   width: '12rem',
   pt: '$4',
   filter: 'drop-shadow(-8px 15px 24px rgba(0,0,0,0.18))',
   userSelect: 'none',
   '@tablet': { width: '15rem' },
-})
-const Behind = styled(View, {
-  alignSelf: 'center',
-  position: 'absolute',
-  width: '6.5rem',
-  right: '55%',
-  bottom: '-8%',
-  '@tablet': { width: '8rem' },
 })

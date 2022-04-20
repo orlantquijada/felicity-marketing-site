@@ -24,6 +24,10 @@ const navLinks = [
     title: 'FAQs',
   },
   {
+    href: '/register',
+    title: 'Register',
+  },
+  {
     href: '/shop',
     title: 'Shop',
   },

@@ -59,8 +59,8 @@ function HeroContent() {
           damping: 30,
         }}
       >
-        Discover <EmphasizedSloganText>Fresh and Healthy </EmphasizedSloganText>
-        Food
+        Experience <EmphasizedSloganText>Effortless </EmphasizedSloganText>
+        Grocery Shopping
       </SloganText>
       <CompanyDescription
         as={m.p}
@@ -73,9 +73,8 @@ function HeroContent() {
           delay: 0.5,
         }}
       >
-        Millions of companies of all sizes—from startups to Fortune 500s—use
-        Stripe’s software and APIs to accept payments, send payouts, and manage
-        their businesses online.
+        Fill your tables with food made from the freshest produce in the island
+        without having to break a bank or a sweat.
       </CompanyDescription>
       <ScrollReveal
         transition={{
@@ -97,7 +96,7 @@ function HeroContent() {
             height: 'unset',
           }}
         >
-          Download App
+          Get Started Now
         </CTA>
       </ScrollReveal>
     </Flex>

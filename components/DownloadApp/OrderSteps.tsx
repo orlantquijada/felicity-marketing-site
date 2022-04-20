@@ -11,22 +11,19 @@ const data = [
     id: 1,
     imageProps: Shop,
     columnTitle: 'CLICK',
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing, ipsum dolor sit amit',
+    subtitle: 'Browse through the app and simply click your favorite goods',
   },
   {
     id: 2,
     imageProps: Click,
-    columnTitle: 'SHOP',
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing, ipsum dolor sit amit',
+    columnTitle: 'CONFIRM',
+    subtitle: 'Review your orders and check them out the cart',
   },
   {
     id: 3,
     imageProps: Deliver,
-    columnTitle: 'DELIVER',
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing, ipsum dolor sit amit',
+    columnTitle: 'COLLECT',
+    subtitle: 'Get your order without having to leave your home',
   },
 ]
 

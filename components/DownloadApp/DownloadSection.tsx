@@ -25,12 +25,13 @@ export default function DownloadSection() {
         <Container size="medium" as={FlexCol} css={{ m: 0, p: 0 }}>
           <ScrollReveal>
             <Description>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
-              donec ultrices tincidunt arcu non sodales neque. Orci phasellus
-              egestas tellus rutrum tellus pellentesque eu tincidunt tortor rci
-              phasellus egestas tellus rutrum tellus pellentesque eu tincidunt
-              tortor
+              No more wasted time when shopping for your veggies, fruits, and
+              meat can be done anytime and anywhere with less effort! Join the
+              thousands of Filipinos who made the decision to live a more
+              comfortable, more productive, healthier, and happier lives every
+              single day and enjoy a lot more of perks by becoming a part of the
+              Felicity Community. See the difference for yourself and experience
+              Fresh Happiness Every Day!
             </Description>
           </ScrollReveal>
           <ScrollReveal>
@@ -43,7 +44,7 @@ export default function DownloadSection() {
                 <Image src={Appstore} alt="appstore" />
               </Link>
               <Link
-                href="http://facebok.com"
+                href="https://play.google.com/store/apps/details?id=com.felicityincorporated.felicity"
                 target="_blank"
                 rel="noreferrer noopener"
               >
